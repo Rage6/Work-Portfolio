@@ -59,7 +59,7 @@
         @endfor
 
         <svg class="mountainRangeFar" role="img" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <path d="
+          <!-- <path d="
             M 0 100
             L 0 55
             Q 15 05 25 30
@@ -67,17 +67,24 @@
             Q 65 05 75 30
             Q 80 55 100 30
             L 100 30
+            L 100 100 Z" /></path> -->
+          <path d="
+            M 0 100
+            L -20 30
+            Q -20 30 0 55
+            Q 20 80 40 55
+            Q 60 30 80 55
+            Q 100 80 120 55
             L 100 100 Z" /></path>
         </svg>
         <svg class="mountainRangeClose" role="img" viewBox="0 0 100 100" preserveAspectRatio="none">
           <path d="
             M 0 100
-            L 0 55
-            Q 15 05 25 30
-            Q 30 55 50 55
-            Q 65 05 75 30
-            Q 80 55 100 30
-            L 100 30
+            L 0 40
+            Q 20 40 40 55
+            Q 60 70 80 55
+            Q 100 40 120 55
+            L 100 40
             L 100 100 Z" /></path>
         </svg>
         <!-- money > not much money due to dropping list of members

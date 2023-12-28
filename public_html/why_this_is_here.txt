@@ -1,0 +1,1 @@
+This is a duplicate of the /public directory, but with the changes so that it fits with the A2 Hosting server.

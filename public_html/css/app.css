@@ -118,7 +118,8 @@ main {
   position: absolute;
   top: 73vh;
   left: 0;
-  fill: #A48222;
+  /* fill: #A48222; */
+  fill: #A62c09;
 }
 
 .mountainRangeFar {
@@ -127,7 +128,8 @@ main {
   position: absolute;
   top: 65vh;
   left: 0;
-  fill: #C19823;
+  /* fill: #C19823; */
+  fill: #D0370D;
 }
 
 .star {
@@ -164,6 +166,16 @@ main {
     width: var(--star-far-size-wide);
     height: var(--star-far-size);
     animation-duration: 40s;
+  }
+}
+
+.extraStarFar {
+  display: none;
+}
+
+@media (min-width:700px) {
+  .extraStarFar {
+    display: block;
   }
 }
 

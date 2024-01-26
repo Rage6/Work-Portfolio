@@ -17,6 +17,10 @@ const app = createApp({});
 
 import ExampleComponent from './components/ExampleComponent.vue';
 app.component('example-component', ExampleComponent);
+import FlashComponent from '/resources/js/components/FlashComponent.vue';
+app.component('flash-component', FlashComponent);
+import MenuComponent from '/resources/js/components/MenuComponent.vue';
+app.component('menu-component', MenuComponent);
 
 /**
  * The following block of code may be used to automatically register your

@@ -185,6 +185,7 @@ main {
   top: 73vh;
   left: 0;
   fill: #A62c09;
+  z-index: 2;
 }
 
 .mountainRangeFar {
@@ -520,6 +521,100 @@ main {
 
 .welcomeTitle div:first-of-type {
   margin-right: 10px;
+}
+
+/* resources/views/works.blade.php */
+
+.works {
+  margin: 15vh 4vw 0vh 4vw;
+  font-size: 1.2rem;
+  position: absolute;
+  overflow-y: scroll;
+  height: 85vh;
+  width: 92vw;
+}
+
+.worksScroll {
+  margin-bottom: 20vh;
+  border-radius: 15px;
+  padding: 1vh 3vw;
+  background-color: rgba(11, 45, 57, 0.7);
+}
+
+.worksTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  font-family: 'Whisper';
+}
+
+.worksTitle span {
+  border-radius: 15px;
+  padding: 5px 20px;
+  background-color: rgba(11, 45, 57, 0.7);
+}
+
+.projectScroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20vh;
+}
+
+.oneProject {
+  height: 80vw;
+  width: 80vw;
+}
+
+/* resources/views/about.blade.php */
+
+.aboutMe {
+  margin: 15vh 4vw 0vh 4vw;
+  font-size: 1.2rem;
+  position: absolute;
+  overflow-y: scroll;
+  height: 85vh;
+}
+
+.aboutScroll {
+  margin-bottom: 20vh;
+  border-radius: 15px;
+  padding: 1vh 3vw;
+  background-color: rgba(11, 45, 57, 0.7);
+}
+
+.aboutTitle {
+  font-size: 3rem;
+  font-family: 'Whisper';
+  text-align: center;
+}
+
+.aboutStory div {
+  margin-bottom: 30px;
+}
+
+.aboutStory div a {
+  font-weight: bold;
+}
+
+.poolImg {
+  border-radius: 15px;
+  background-image: 
+    radial-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1),rgba(0,0,0,1)), 
+    url('/images/vogt_pool-2-min.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 86vw;
+  width: 86vw;
+}
+
+@media (min-width:700px) {
+  .poolImg {
+    margin-left: 30px;
+    float: right;
+    width: 30vw;
+    height: 30vw;
+  }
 }
 
 /* resources/views/contact.blade.php */

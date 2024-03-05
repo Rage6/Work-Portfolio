@@ -22,3 +22,4 @@ Route::post('/send-email',[App\Http\Controllers\ContactController::class, 'email
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/add-project', [App\Http\Controllers\HomeController::class, 'add_project'])->name('add_project');

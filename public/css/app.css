@@ -566,6 +566,11 @@ main {
   width: 80vw;
 }
 
+.projectImg {
+  background-position: center;
+  background-size: cover;
+}
+
 /* resources/views/about.blade.php */
 
 .aboutMe {

@@ -11,7 +11,7 @@
     @if (count($all_projects) > 0)
       <div class="projectScroll">
         @foreach ($all_projects as $one_project)
-          <div class="oneProject">
+          <div class="oneProject projectImg" style='background-image:url({{ url($one_project->img_path) }})'>
             {{ $one_project->name }}
           </div>
         @endforeach

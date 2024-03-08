@@ -26,7 +26,7 @@ class ContactController extends Controller
         'content' => 'string'
       ]);
       session()->flash('flashMessage','Message Sent');
-    //   Mail::to('nicholas.vogt2017@gmail.com')->send(new BasicMessage($request->title,$request->content,$request->email,$request->name));
+      Mail::to('nicholas.vogt2017@gmail.com')->send(new BasicMessage($request->title,$request->content,$request->email,$request->name));
       return redirect()->route('welcome');
     }
 

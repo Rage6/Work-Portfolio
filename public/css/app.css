@@ -526,11 +526,10 @@ main {
 /* resources/views/works.blade.php */
 
 .works {
-  margin: 15vh 4vw 0vh 4vw;
+  margin: 0vh 4vw;
   font-size: 1.2rem;
   position: absolute;
-  overflow-y: scroll;
-  height: 85vh;
+  height: 100vh;
   width: 92vw;
 }
 
@@ -542,10 +541,14 @@ main {
 }
 
 .worksTitle {
+  margin-top: 12vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   font-size: 3rem;
   font-family: 'Whisper';
+  height: 10vh;
 }
 
 .worksTitle span {
@@ -554,21 +557,74 @@ main {
   background-color: rgba(11, 45, 57, 0.7);
 }
 
-.projectScroll {
+.workGallery {
+  padding: 4vh 0;
+  overflow-y: scroll;
+  height: 78vh;
+}
+
+.workGallery::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width:700px) {
+  .workGallery {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+  }
+}
+
+.projectList {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20vh;
+  padding-bottom: 10vh;
+}
+
+@media (min-width:700px) {
+  .projectList {
+    padding-bottom: 15vh;
+    display: grid;
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+    grid-gap: 20px;
+    align-items: unset;
+  }
 }
 
 .oneProject {
-  height: 80vw;
-  width: 80vw;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60vw;
+  width: 60vw;
+}
+
+.projectLink {
+  border-radius: 100%;
+}
+
+@media (min-width:700px) {
+  .oneProject {
+    margin-bottom: unset;
+    display: unset;
+    flex-direction: unset;
+    justify-content: unset;
+    height: unset;
+    width: 100%;
+  }
 }
 
 .projectImg {
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+}
+
+.projectTitle {
+  margin-left: 15%;
+  text-align: center;
+  width: 70%;
 }
 
 /* resources/views/about.blade.php */
@@ -579,6 +635,10 @@ main {
   position: absolute;
   overflow-y: scroll;
   height: 85vh;
+}
+
+.aboutMe::-webkit-scrollbar {
+  display: none;
 }
 
 .aboutScroll {

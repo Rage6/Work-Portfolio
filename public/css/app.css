@@ -559,13 +559,13 @@ main {
 
 .workGallery {
   padding: 4vh 0;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   height: 78vh;
 }
 
-.workGallery::-webkit-scrollbar {
+/* .workGallery::-webkit-scrollbar {
   display: none;
-}
+} */
 
 @media (min-width:700px) {
   .workGallery {
@@ -573,6 +573,14 @@ main {
     grid-template-columns: 48% 48%;
     gap: 4%;
   }
+}
+
+.projectListOutline {
+  overflow-y: scroll;
+}
+
+.projectListOutline::-webkit-scrollbar {
+  display: none;
 }
 
 .projectList {

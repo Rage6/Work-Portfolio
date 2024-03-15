@@ -577,6 +577,7 @@ main {
 
 .projectListOutline {
   overflow-y: scroll;
+  height: 100%;
 }
 
 .projectListOutline::-webkit-scrollbar {

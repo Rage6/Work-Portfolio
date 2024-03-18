@@ -184,6 +184,7 @@ main {
   width: 100%;
   position: absolute;
   top: 73vh;
+  top: calc(var(--vh, 1vh) * 73);
   left: 0;
   fill: #A62c09;
   z-index: 2;

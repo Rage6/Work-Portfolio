@@ -142,6 +142,7 @@ main {
   z-index: 0;
   background: linear-gradient(#0b2d39,#124d5e);
   height: 100vh;
+  height: calc(var(--var, 1vh) * 100);
   width: 100vw;
   /* background-image:
     linear-gradient(darkblue,darkblue 70%,transparent 70%, transparent),

@@ -56,6 +56,7 @@
     </style>
 
     <!-- Scripts -->
+    <script src="/js/plain.js" ></script>
     <script>
       window.flashMessage = "{{ session()->has('flashMessage') ? session()->get('flashMessage') : 0 }}"
     </script>

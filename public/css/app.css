@@ -7,14 +7,17 @@
   --star-far-size-wide: 3vw;
 }
 
+body {
+  height: 100%;
+}
+
 /* resources/views/layouts/public.blade.php */
 
 .app {
   color: #E7B85A;
   display: grid;
-  grid-template-rows: 6vh 94vh;
-  /* height: 100vh;
-  height: calc(var(--vh, 1vh) * 100); */
+  grid-template-rows: 6% 94%;
+  height: 100%;
 }
 
 .app a {
@@ -70,9 +73,10 @@
 .mainNav {
   padding: 1vh 2vw;
   font-size: 1.3rem;
-  background-color: transparent;
+  background-color: rgba(0,0,0,0);
   position: absolute;
   z-index: 1;
+  width: 100%;
 }
 
 @media (min-width:700px) {
@@ -534,7 +538,7 @@ main {
   margin: 0vh 4vw;
   font-size: 1.2rem;
   position: absolute;
-  height: 100%;
+  height: calc(var(--vh) * 100);
   width: 92vw;
 }
 
@@ -553,8 +557,8 @@ main {
   justify-content: center;
   font-size: 3rem;
   font-family: 'Whisper';
-  /* height: 10vh; */
-  height: 10%;
+  height: 10vh;
+  height: calc(var(--vh) * 10);
 }
 
 .worksTitle span {
@@ -566,8 +570,8 @@ main {
 .workGallery {
   padding: 4% 0;
   /* overflow-y: scroll; */
-  /* height: 78vh; */
-  height: 78%;
+  height: 78vh;
+  height: calc(var(--vh) * 78);
 }
 
 /* .workGallery::-webkit-scrollbar {

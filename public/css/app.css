@@ -85,10 +85,6 @@ body {
   }
 }
 
-.mainMenu {
-
-}
-
 @media (min-width:700px) {
   .mainMenu {
     display: none;
@@ -143,43 +139,10 @@ body {
 }
 
 main {
-  /* position: absolute;
-  z-index: 0; */
   background: linear-gradient(#0b2d39,#124d5e);
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
-  /* background-image:
-    linear-gradient(darkblue,darkblue 70%,transparent 70%, transparent),
-    conic-gradient(
-      from 0turn at 50% 60%,
-      transparent 0%,
-      black 27%,
-      #1548D5 27%,
-      #1548D5 32%,
-      black 32%,
-      black 37%,
-      #1548D5 37%,
-      #1548D5 42%,
-      black 42%,
-      black 47%,
-      #1548D5 47%,
-      #1548D5 52%,
-      black 52%,
-      black 57%,
-      #1548D5 57%,
-      #1548D5 62%,
-      black 62%,
-      black 67%,
-      #1548D5 67%,
-      #1548D5 72%,
-      black 72%,
-      black 77%,
-      #1548D5);
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-name: spinBackground; */
 }
 
 .mountainRangeClose {

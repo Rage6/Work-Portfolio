@@ -13,7 +13,8 @@
   color: #E7B85A;
   display: grid;
   grid-template-rows: 6vh 94vh;
-  height: 100vh;
+  /* height: 100vh;
+  height: calc(var(--vh, 1vh) * 100); */
 }
 
 .app a {
@@ -70,6 +71,7 @@
   padding: 1vh 2vw;
   font-size: 1.3rem;
   background-color: transparent;
+  position: absolute;
   z-index: 1;
 }
 
@@ -137,9 +139,8 @@
 }
 
 main {
-  /* color: #E7B85A; */
-  position: absolute;
-  z-index: 0;
+  /* position: absolute;
+  z-index: 0; */
   background: linear-gradient(#0b2d39,#124d5e);
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
@@ -184,7 +185,7 @@ main {
   width: 100%;
   position: absolute;
   top: 73vh;
-  top: calc(var(--vh, 1vh) * 73);
+  top: 73%;
   left: 0;
   fill: #A62c09;
   z-index: 2;
@@ -195,7 +196,7 @@ main {
   width: 100%;
   position: absolute;
   top: 65vh;
-  top: calc(var(--vh, 1vh) * 65);
+  top: 65%;
   left: 0;
   fill: #D0370D;
 }
@@ -489,6 +490,7 @@ main {
 .centerWelcome {
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 
 .welcome {
@@ -532,7 +534,7 @@ main {
   margin: 0vh 4vw;
   font-size: 1.2rem;
   position: absolute;
-  height: 100vh;
+  height: 100%;
   width: 92vw;
 }
 
@@ -544,7 +546,7 @@ main {
 }
 
 .worksTitle {
-  margin-top: 12vh;
+  margin-top: 12%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -562,7 +564,7 @@ main {
 }
 
 .workGallery {
-  padding: 4vh 0;
+  padding: 4% 0;
   /* overflow-y: scroll; */
   /* height: 78vh; */
   height: 78%;

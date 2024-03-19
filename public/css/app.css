@@ -2,9 +2,9 @@
   --star-fill: #E7B85A;
   --star-opacity: 0.8;
   --star-close-size: 50px;
-  --star-close-size-wide: 5vw;
+  --star-close-size-wide: calc(var(--vw) * 5);
   --star-far-size: 30px;
-  --star-far-size-wide: 3vw;
+  --star-far-size-wide: calc(var(--vw) * 3);
 }
 
 body {
@@ -141,7 +141,7 @@ body {
 main {
   background: linear-gradient(#0b2d39,#124d5e);
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  height: var(--height);
   width: 100vw;
 }
 
@@ -228,7 +228,7 @@ main {
 
 @keyframes star1 {
   0% {
-    transform: translate(5vw, calc(100vh - var(--star-close-size)));
+    transform: translate(5vw, calc(var(--height) - var(--star-close-size)));
   }
   15% {
     opacity: var(--star-opacity);
@@ -245,7 +245,7 @@ main {
 
 @keyframes star1Wide {
   0% {
-    transform: translate(5vw, calc(100vh - var(--star-close-size-wide)));
+    transform: translate(5vw, calc(var(--height) - var(--star-close-size-wide)));
   }
   15% {
     opacity: var(--star-opacity);
@@ -501,7 +501,7 @@ main {
   margin: 0vh 4vw;
   font-size: 1.2rem;
   position: absolute;
-  height: calc(var(--vh) * 100);
+  height: var(--height);
   width: 92vw;
 }
 

@@ -195,6 +195,7 @@ main {
   width: 100%;
   position: absolute;
   top: 65vh;
+  top: calc(var(--vh, 1vh) * 65);
   left: 0;
   fill: #D0370D;
 }
@@ -550,7 +551,8 @@ main {
   justify-content: center;
   font-size: 3rem;
   font-family: 'Whisper';
-  height: 10vh;
+  /* height: 10vh; */
+  height: 10%;
 }
 
 .worksTitle span {
@@ -562,7 +564,8 @@ main {
 .workGallery {
   padding: 4vh 0;
   /* overflow-y: scroll; */
-  height: 78vh;
+  /* height: 78vh; */
+  height: 78%;
 }
 
 /* .workGallery::-webkit-scrollbar {
@@ -579,7 +582,8 @@ main {
 
 .projectListOutline {
   overflow-y: scroll;
-  height: 70vh;
+  /* height: 70vh; */
+  height: 100%;
 }
 
 .projectListOutline::-webkit-scrollbar {

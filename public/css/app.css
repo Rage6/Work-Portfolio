@@ -272,10 +272,10 @@ main {
 
 @keyframes star2 {
   0% {
-    transform: translate(25vw, calc(100vh - var(--star-close-size)));
+    transform: translate(25vw, calc(var(--height) - var(--star-close-size)));
   }
   40% {
-    transform: translate(25vw, calc(100vh - var(--star-close-size)));
+    transform: translate(25vw, calc(var(--height) - var(--star-close-size)));
   }
   55% {
     opacity: var(--star-opacity);
@@ -292,10 +292,10 @@ main {
 
 @keyframes star2Wide {
   0% {
-    transform: translate(25vw, calc(100vh - var(--star-close-size-wide)));
+    transform: translate(25vw, calc(var(--height) - var(--star-close-size-wide)));
   }
   40% {
-    transform: translate(25vw, calc(100vh - var(--star-close-size-wide)));
+    transform: translate(25vw, calc(var(--height) - var(--star-close-size-wide)));
   }
   55% {
     opacity: var(--star-opacity);
@@ -322,10 +322,10 @@ main {
 
 @keyframes star3 {
   0% {
-    transform: translate(85vw, calc(100vh - var(--star-close-size)));
+    transform: translate(85vw, calc(var(--height) - var(--star-close-size)));
   }
   20% {
-    transform: translate(85vw, calc(100vh - var(--star-close-size)));
+    transform: translate(85vw, calc(var(--height) - var(--star-close-size)));
   }
   35% {
     opacity: var(--star-opacity);
@@ -342,10 +342,10 @@ main {
 
 @keyframes star3Wide {
   0% {
-    transform: translate(85vw, calc(100vh - var(--star-close-size-wide)));
+    transform: translate(85vw, calc(var(--height) - var(--star-close-size-wide)));
   }
   20% {
-    transform: translate(85vw, calc(100vh - var(--star-close-size-wide)));
+    transform: translate(85vw, calc(var(--height) - var(--star-close-size-wide)));
   }
   35% {
     opacity: var(--star-opacity);
@@ -372,10 +372,10 @@ main {
 
 @keyframes star4 {
   0% {
-    transform: translate(60vw, calc(100vh - var(--star-close-size)));
+    transform: translate(60vw, calc(var(--height) - var(--star-close-size)));
   }
   60% {
-    transform: translate(60vw, calc(100vh - var(--star-close-size)));
+    transform: translate(60vw, calc(var(--height) - var(--star-close-size)));
   }
   75% {
     opacity: var(--star-opacity);
@@ -392,10 +392,10 @@ main {
 
 @keyframes star4Wide {
   0% {
-    transform: translate(60vw, calc(100vh - var(--star-close-size-wide)));
+    transform: translate(60vw, calc(var(--height) - var(--star-close-size-wide)));
   }
   60% {
-    transform: translate(60vw, calc(100vh - var(--star-close-size-wide)));
+    transform: translate(60vw, calc(var(--height) - var(--star-close-size-wide)));
   }
   75% {
     opacity: var(--star-opacity);
@@ -422,10 +422,10 @@ main {
 
 @keyframes star5 {
   0% {
-    transform: translate(40vw, calc(100vh - var(--star-close-size)));
+    transform: translate(40vw, calc(var(--height) - var(--star-close-size)));
   }
   80% {
-    transform: translate(40vw, calc(100vh - var(--star-close-size)));
+    transform: translate(40vw, calc(var(--height) - var(--star-close-size)));
   }
   95% {
     opacity: var(--star-opacity);
@@ -438,10 +438,10 @@ main {
 
 @keyframes star5Wide {
   0% {
-    transform: translate(40vw, calc(100vh - var(--star-close-size-wide)));
+    transform: translate(40vw, calc(var(--height) - var(--star-close-size-wide)));
   }
   80% {
-    transform: translate(40vw, calc(100vh - var(--star-close-size-wide)));
+    transform: translate(40vw, calc(var(--height) - var(--star-close-size-wide)));
   }
   95% {
     opacity: var(--star-opacity);

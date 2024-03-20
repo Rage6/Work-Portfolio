@@ -148,7 +148,7 @@ main {
 .mountainRangeClose {
   transform: scaleY(1);
   /* transform: scaleX(2); */
-  height: 27vh;
+  height: calc(var(--vh) * 27);
   width: 100%;
   position: absolute;
   top: 73vh;
@@ -159,7 +159,7 @@ main {
 }
 
 .mountainRangeFar {
-  height: 25vh;
+  height: calc(var(--vh) * 25);
   width: 100%;
   position: absolute;
   top: 65vh;

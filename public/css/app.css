@@ -613,48 +613,46 @@ main {
 
 /* resources/views/about.blade.php */
 
-.aboutMe {
-  margin: 15vh 4vw 0vh 4vw;
-  font-size: 1.2rem;
-  position: absolute;
-  overflow-y: scroll;
-  height: 85vh;
+.aboutMeContent {
+  padding: 4% 0;
+  /* overflow-y: scroll; */
+  height: 78vh;
+  height: calc(var(--vh) * 78);
 }
 
-.aboutMe::-webkit-scrollbar {
+.aboutMeOutline {
+  border-radius: 15px;
+  overflow-y: scroll;
+  /* height: 70vh; */
+  height: 100%;
+}
+
+.aboutMeOutline::-webkit-scrollbar {
   display: none;
 }
 
-.aboutScroll {
-  margin-bottom: 20vh;
+.aboutMeList {
+  margin-bottom: 10vh;
   border-radius: 15px;
-  padding: 1vh 3vw;
+  padding-top: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgba(11, 45, 57, 0.7);
 }
 
-.aboutTitle {
-  font-size: 3rem;
-  font-family: 'Whisper';
-  text-align: center;
-}
-
-.aboutStory div {
+.aboutMeList div {
   margin-bottom: 30px;
-}
-
-.aboutStory div a {
-  font-weight: bold;
+  width: 86vw;
 }
 
 .poolImg {
   border-radius: 15px;
-  background-image: 
-    radial-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1),rgba(0,0,0,1)), 
-    url('/images/vogt_pool-2-min.jpg');
+  background-image: url('/images/vogt_pool-2-min.jpg');
   background-position: center;
   background-size: cover;
   height: 86vw;
-  width: 86vw;
+  /* width: 86vw; */
 }
 
 @media (min-width:700px) {

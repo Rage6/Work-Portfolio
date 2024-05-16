@@ -21,6 +21,8 @@ import FlashComponent from '/resources/js/components/FlashComponent.vue';
 app.component('flash-component', FlashComponent);
 import MenuComponent from '/resources/js/components/MenuComponent.vue';
 app.component('menu-component', MenuComponent);
+import ScrollBarComponent from '/resources/js/components/ScrollBarComponent.vue';
+app.component('scroll-bar-component', ScrollBarComponent);
 
 /**
  * The following block of code may be used to automatically register your

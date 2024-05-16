@@ -76,6 +76,7 @@ body {
   background-color: rgba(0,0,0,0);
   position: absolute;
   z-index: 1;
+  height: calc(var(--vh) * 6);
   width: 100%;
 }
 
@@ -130,7 +131,6 @@ body {
 }
 
 .mainNav div a {
-  /* color: #E7B85A; */
   text-decoration: none;
 }
 
@@ -141,13 +141,13 @@ body {
 main {
   background: linear-gradient(#0b2d39,#124d5e);
   height: 100vh;
-  height: var(--height);
+  /* height: var(--height); */
+  height: calc(var(--vh) * 100);
   width: 100vw;
 }
 
 .mountainRangeClose {
   transform: scaleY(1);
-  /* transform: scaleX(2); */
   height: calc(var(--vh) * 27);
   width: 100%;
   position: absolute;
@@ -199,7 +199,6 @@ main {
 
 @media (min-width:700px) {
   .starFar {
-    /* width: var(--star-far-size-wide); */
     width: var(--star-far-size-size);
     height: var(--star-far-size);
     animation-duration: 40s;
@@ -513,7 +512,7 @@ main {
 }
 
 .worksTitle {
-  margin-top: 12%;
+  margin-top: calc(var(--vh) * 12);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -531,28 +530,65 @@ main {
 }
 
 .workGallery {
-  padding: 4% 0;
-  /* overflow-y: scroll; */
-  height: 78vh;
+  /* padding: 4% 0; */
+  display: grid;
+  grid-template-areas: 
+    "scrollUp list";
+  grid-template-columns: 10vw 82vw;
+  /* height: 78vh; */
   height: calc(var(--vh) * 78);
 }
-
-/* .workGallery::-webkit-scrollbar {
-  display: none;
-} */
 
 @media (min-width:700px) {
   .workGallery {
     display: grid;
-    grid-template-columns: 48% 48%;
-    gap: 4%;
+    grid-template-areas: 
+    "scrollUp list details";
+    grid-template-columns: 2% 47% 47%;
+    gap: 2%;
   }
 }
 
+.scrollBar {
+  margin-top: 60vw;
+  grid-area: scrollUp;
+}
+
+@media (min-width:700px) {
+  .scrollBar {
+    margin-top: 8vw;
+  }
+}
+
+.scrollBttns {
+  border: 1px solid #E7B85A;
+  border-radius: 10px 10px 0 0;
+  background-color: #0b2d39;
+} 
+
+.scrollBttns:first-of-type {
+  border-bottom: none;
+}
+
+.scrollBttns:last-of-type {
+  transform: rotateX(180deg);
+}
+
+.scrollBttns svg {
+  padding: 0 15%;
+}
+
 .projectListOutline {
-  overflow-y: scroll;
-  /* height: 70vh; */
-  height: 100%;
+  padding: 0 11vw;
+  overflow-y: hidden;
+  grid-area: list;
+  height: calc(var(--vh) * 78);
+}
+
+@media (min-width:700px) {
+  .projectListOutline {
+    padding: 0 0;
+  }
 }
 
 .projectListOutline::-webkit-scrollbar {
@@ -560,15 +596,15 @@ main {
 }
 
 .projectList {
-  display: flex;
+  /* position: absolute;
+  transition: top 1s; */
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-bottom: 10vh;
+  align-items: center; */
 }
 
 @media (min-width:700px) {
   .projectList {
-    padding-bottom: 15vh;
     display: grid;
     grid-template-columns: calc(50% - 10px) calc(50% - 10px);
     grid-gap: 20px;
@@ -605,17 +641,49 @@ main {
   background-size: contain;
 }
 
-.projectTitle {
+/* .projectTitle {
   margin-left: 15%;
   text-align: center;
   width: 70%;
+} */
+
+.selectedProjects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: details;
+}
+
+.emptyContent {
+  display: none;
+}
+
+@media (min-width:700px) {
+  .emptyContent {
+    display: block;
+  }
+}
+
+.emptyContent span {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(11, 45, 57, 0.7);
+}
+
+.selectedContent {
+  border-radius: 15px;
+  display: none;
+  background-color: rgba(11, 45, 57, 0.7);
+}
+
+.selectedTitle {
+  text-align: center;
 }
 
 /* resources/views/about.blade.php */
 
 .aboutMeContent {
   padding: 4% 0;
-  /* overflow-y: scroll; */
   height: 78vh;
   height: calc(var(--vh) * 78);
 }
@@ -623,7 +691,6 @@ main {
 .aboutMeOutline {
   border-radius: 15px;
   overflow-y: scroll;
-  /* height: 70vh; */
   height: 100%;
 }
 
@@ -632,18 +699,10 @@ main {
 }
 
 .aboutMeList {
-  margin-bottom: 10vh;
+  margin-bottom: 18vh;
   border-radius: 15px;
-  padding-top: 3vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 3vw 0 3vw 3vw;
   background-color: rgba(11, 45, 57, 0.7);
-}
-
-.aboutMeList div {
-  margin-bottom: 30px;
-  width: 86vw;
 }
 
 .poolImg {
@@ -652,7 +711,7 @@ main {
   background-position: center;
   background-size: cover;
   height: 86vw;
-  /* width: 86vw; */
+  width: 86vw;
 }
 
 @media (min-width:700px) {

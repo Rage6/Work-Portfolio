@@ -10,8 +10,9 @@
     </div>
     <div class="workGallery">
       @if (count($all_projects) > 0)
-        <div class="projectListOutline">
-          <div class="projectList">
+        <scroll-bar-component></scroll-bar-component>
+        <div class="projectListOutline" id="projectListOutline">
+          <div class="projectList" id="projectList">
             @foreach ($all_projects as $one_project)
               <svg
                 class="oneProject"
@@ -39,30 +40,44 @@
                       <stop offset="97%" stop-color="#E7B85A"/>
                   </radialGradient>
                 </defs>
-                <a href="{{ $one_project->site_url }}" target="_blank">
+                <!-- <a href="{{ $one_project->site_url }}" target="_blank"> -->
                   <circle 
                     fill="url('#projectCircle_{{ $one_project->id }}')"
                     cx="50" 
                     cy="50" 
                     r="50" />
-                </a>
-                <a href="{{ $one_project->site_url }}" target="_blank">
+                <!-- </a> -->
+                <!-- <a href="{{ $one_project->site_url }}" target="_blank"> -->
                   <rect 
                     x="15" 
                     y="15" 
                     height="70" 
                     width="70" 
                     fill="url('#projectSquare_{{ $one_project->id }}')" />
-                </a>
+                <!-- </a> -->
               </svg>
             @endforeach
           </div>
         </div>
-        <div>
-          <!-- Testing -->
+        <div class="selectedProjects">
+          <div class="emptyContent">
+            <span>
+              Select any work for more details
+            </span>
+          </div>
+          @foreach ($all_projects as $one_project)
+            <div class="selectedContent" data-detail-id="{{ $one_project->id }}">
+              <div class="selectedTitle">
+                {{ $one_project->name }}
+              </div>
+              <div class="selectedTitle">
+                {{ $one_project->description }}
+              </div>
+            </div>
+          @endforeach
         </div>
       @else 
-        <div class="projectList">
+        <div class="projectList" id="projectList">
             <div class="oneProject projectImg" style='background-image:url({{ url($one_project->img_path) }})'>
               <i>No works found</i>
             </div>

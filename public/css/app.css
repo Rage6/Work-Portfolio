@@ -596,11 +596,7 @@ main {
 }
 
 .projectList {
-  /* position: absolute;
-  transition: top 1s; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
+  transition: margin-top 0.5s;
 }
 
 @media (min-width:700px) {
@@ -648,36 +644,79 @@ main {
 } */
 
 .selectedProjects {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-area: details;
-}
-
-.emptyContent {
-  display: none;
+  position: absolute;
+  top: 12vh;
+  width: 92vw;
 }
 
 @media (min-width:700px) {
-  .emptyContent {
-    display: block;
+  .selectedProjects {
+    margin-top: 2vh;
+    position: inherit;
+    grid-area: details;
+    width: 100%;
   }
 }
 
-.emptyContent span {
-  border-radius: 10px;
-  padding: 10px;
-  background-color: rgba(11, 45, 57, 0.7);
+.exitRow {
+  display: flex;
+  justify-content: end;
+}
+
+.selectedLogo {
+  display: flex;
+  justify-content: center;
+  max-height: 150px;
+}
+
+.selectedLogo img {
+  margin-bottom: 30px;
+  width: 125px;
 }
 
 .selectedContent {
   border-radius: 15px;
+  padding: 10px 5%;
   display: none;
-  background-color: rgba(11, 45, 57, 0.7);
+  background-color: rgba(11, 45, 57, 0.9);
+  height: 72vh;
+  overflow-y: scroll;
+}
+
+@media (min-width:700px) {
+  .selectedContent {
+    height: 62vh;
+  }
 }
 
 .selectedTitle {
   text-align: center;
+}
+
+.selectedLinks {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #E7B85A;
+  border-bottom: 1px solid #E7B85A;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.selectedLinks a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.selectedLinks a div {
+  border-radius: 20px;
+  padding: 10px;
+  color: rgba(11, 45, 57);
+  background-color: #E7B85A;
+}
+
+.selectedDescription {
+  
 }
 
 /* resources/views/about.blade.php */

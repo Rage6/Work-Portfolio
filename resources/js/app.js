@@ -23,6 +23,10 @@ import MenuComponent from '/resources/js/components/MenuComponent.vue';
 app.component('menu-component', MenuComponent);
 import ScrollBarComponent from '/resources/js/components/ScrollBarComponent.vue';
 app.component('scroll-bar-component', ScrollBarComponent);
+import ProjectComponent from '/resources/js/components/ProjectComponent.vue';
+app.component('project-component', ProjectComponent);
+import DetailComponent from '/resources/js/components/DetailComponent.vue';
+app.component('detail-component', DetailComponent);
 
 /**
  * The following block of code may be used to automatically register your

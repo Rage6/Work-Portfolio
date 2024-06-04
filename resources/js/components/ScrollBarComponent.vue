@@ -31,7 +31,7 @@
 <script>
     export default {
         methods: {
-            scrollUp: function() {
+            scrollDown: function() {
 
                 var listEl = document.getElementById("projectList");
                 var listStyle = listEl.currentStyle || window.getComputedStyle(listEl);
@@ -44,10 +44,16 @@
                 var marginBottom = parseInt(projectStyle["margin-bottom"],10);
                 var projectHeight = projectEl.clientHeight + marginBottom + gridGap;
 
-                listEl.style.marginTop = currentMarginTop - (projectHeight / 2) + "px";
+                var listHeight = listEl.offsetHeight; 
+                var minMargin = (listHeight - projectHeight) * (-1);
+
+                if (minMargin <= currentMarginTop) {
+                    var newMarginTop = currentMarginTop - (projectHeight) + "px";
+                    listEl.style.marginTop = newMarginTop;
+                };
                 
             },
-            scrollDown: function() {
+            scrollUp: function() {
 
                 var listEl = document.getElementById("projectList");
                 var listStyle = listEl.currentStyle || window.getComputedStyle(listEl);
@@ -60,7 +66,11 @@
                 var marginBottom = parseInt(projectStyle["margin-bottom"],10 || 0);
                 var projectHeight = projectEl.clientHeight + marginBottom + gridGap;
 
-                listEl.style.marginTop = currentMarginTop + (projectHeight / 2) + "px";
+                if (currentMarginTop < 0) {
+                    // listEl.style.marginTop = currentMarginTop + (projectHeight) + "px";
+                    var newMarginTop = currentMarginTop + (projectHeight) + "px";
+                    listEl.style.marginTop = newMarginTop;
+                };
 
             }
         }

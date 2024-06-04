@@ -14,66 +14,28 @@
         <div class="projectListOutline" id="projectListOutline">
           <div class="projectList" id="projectList">
             @foreach ($all_projects as $one_project)
-              <svg
-                class="oneProject"
-                data-id="{{ $one_project->id }}"
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs>
-                  <pattern 
-                    id="projectSquare_{{ $one_project->id }}" 
-                    patternUnits="userSpaceOnUse" 
-                    width="85" 
-                    height="85">
-                      <image 
-                        class="projectImg"
-                        href="{{ url($one_project->img_path) }}" 
-                        x="15" 
-                        y="15" 
-                        width="70" 
-                        height="70" />
-                  </pattern>
-                  <radialGradient 
-                    id="projectCircle_{{ $one_project->id }}">
-                      <stop offset="97%" stop-color="rgba(11, 45, 57, 0.7)"/>
-                      <stop offset="97%" stop-color="#E7B85A"/>
-                  </radialGradient>
-                </defs>
-                <!-- <a href="{{ $one_project->site_url }}" target="_blank"> -->
-                  <circle 
-                    fill="url('#projectCircle_{{ $one_project->id }}')"
-                    cx="50" 
-                    cy="50" 
-                    r="50" />
-                <!-- </a> -->
-                <!-- <a href="{{ $one_project->site_url }}" target="_blank"> -->
-                  <rect 
-                    x="15" 
-                    y="15" 
-                    height="70" 
-                    width="70" 
-                    fill="url('#projectSquare_{{ $one_project->id }}')" />
-                <!-- </a> -->
-              </svg>
+              <project-component 
+                id="{{ $one_project->id }}" 
+                img_path="{{ $one_project->img_path }}" 
+                site_url="{{ $one_project->site_url }}">
+              </project-component>
             @endforeach
           </div>
         </div>
         <div class="selectedProjects">
           <div class="emptyContent">
-            <span>
-              Select any work for more details
-            </span>
+            
           </div>
           @foreach ($all_projects as $one_project)
-            <div class="selectedContent" data-detail-id="{{ $one_project->id }}">
-              <div class="selectedTitle">
-                {{ $one_project->name }}
-              </div>
-              <div class="selectedTitle">
-                {{ $one_project->description }}
-              </div>
-            </div>
+            <detail-component 
+              id="{{ $one_project->id }}" 
+              name="{{ $one_project->name }}" 
+              description="{{ $one_project->description }}"
+              site_url="{{ $one_project->site_url }}"
+              code_url="{{ $one_project->code_url }}"
+              img_path="{{ $one_project->img_path }}"
+              current="">
+            </detail-component>
           @endforeach
         </div>
       @else 

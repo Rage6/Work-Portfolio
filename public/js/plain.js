@@ -22,9 +22,3 @@ document.documentElement.style.setProperty('--width', fullWidth);
 //   });
 //   // console.log(document.querySelector(`[data-id="`+ id + `"]`));
 // };
-
-// // Scrolls project list up, incrementally
-// var workScrollUp = document.querySelector("#scrollProjectUp");
-// workScrollUp.addEventListener("click", ()=>{
-//     console.log("This worked");
-// });

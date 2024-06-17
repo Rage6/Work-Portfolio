@@ -6,26 +6,28 @@
                 v-bind:data-detailid="id"
             >
         </div>
-        <div class="selectedLogo">
-            <img :src="img_path">
-        </div>
-        <div class="selectedTitle">
-            {{ name }}
-        </div>
-        <div class="selectedLinks">
-            <a :href=site_url target="_blank">
-                <div>
-                    THE SITE
-                </div>
-            </a>
-            <a :href=code_url target="_blank">
-                <div>
-                    THE CODE
-                </div>
-            </a>
-        </div>
-        <div class="selectedDescription">
-            {{ description }}
+        <div class="scrollDetails">
+            <div class="selectedLogo">
+                <img :src="img_path">
+            </div>
+            <div class="selectedTitle">
+                {{ name }}
+            </div>
+            <div class="selectedLinks">
+                <a :href=site_url target="_blank">
+                    <div>
+                        THE SITE
+                    </div>
+                </a>
+                <a :href=code_url target="_blank">
+                    <div>
+                        THE CODE
+                    </div>
+                </a>
+            </div>
+            <div class="selectedDescription">
+                {{ description }}
+            </div>
         </div>
     </div>
 </template>

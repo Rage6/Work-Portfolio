@@ -9,6 +9,7 @@
 
 body {
   height: 100%;
+  overflow: hidden;
 }
 
 /* resources/views/layouts/public.blade.php */
@@ -795,6 +796,7 @@ main {
 }
 @media (min-width:700px) {
   .contactForm {
+    margin-left: calc(50% - 250px);
     padding: 20px;
     width: 500px;
   }

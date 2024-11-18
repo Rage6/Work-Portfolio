@@ -1,0 +1,3 @@
+- 'Composer' is installed in this directory, NOT globally.
+- Commands for 'Composer' start with 'php composer.phar'. 
+    * Example: php composer.phar --version

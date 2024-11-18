@@ -10,7 +10,7 @@
     </div>
     <div class="workGallery">
       @if (count($all_projects) > 0)
-        <scroll-bar-component></scroll-bar-component>
+        <scroll-bar-component page="works"></scroll-bar-component>
         <div class="projectListOutline" id="projectListOutline">
           <div class="projectList" id="projectList">
             @foreach ($all_projects as $one_project)
@@ -40,7 +40,7 @@
         </div>
       @else 
         <div class="projectList" id="projectList">
-            <div class="oneProject projectImg" style='background-image:url({{ url($one_project->img_path) }})'>
+            <div class="oneProject projectImg">
               <i>No works found</i>
             </div>
         </div>

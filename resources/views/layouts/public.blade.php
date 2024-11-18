@@ -97,7 +97,14 @@
             Q 100 80 120 55
             L 100 100 Z" /></path>
         </svg>
-        <svg class="mountainRangeClose" role="img" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <svg class="mountainRangeFarFiller" role="img" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="
+            M 0 100
+            L 0 0
+            L 100 0
+            L 100 100 Z" /></path>
+        </svg>
+        <!-- <svg class="mountainRangeClose" role="img" viewBox="0 0 100 100" preserveAspectRatio="none">
           <path d="
             M 0 100
             L 0 40
@@ -105,6 +112,16 @@
             Q 60 70 80 55
             Q 100 40 120 55
             L 100 40
+            L 100 100 Z" /></path> 
+        </svg> -->
+        <svg class="mountainRangeClose" role="img" viewBox="0 0 100 40" preserveAspectRatio="none">
+          <path d="
+            M 0 100
+            L 0 0
+            Q 20 0 40 15
+            Q 60 30 80 15
+            Q 100 0 120 15
+            L 100 0
             L 100 100 Z" /></path>
         </svg>
         @yield('content')

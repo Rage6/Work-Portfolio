@@ -149,11 +149,12 @@ main {
 
 .mountainRangeClose {
   transform: scaleY(1);
-  height: calc(var(--vh) * 27);
+  height: calc(var(--vh) * 16);
   width: 100%;
   position: absolute;
-  top: 73vh;
-  top: 73%;
+  /* top: 73vh;
+  top: 73%; */
+  top: calc(var(--vh) * 84);
   left: 0;
   fill: #A62c09;
   z-index: 2;
@@ -167,6 +168,17 @@ main {
   top: 65%;
   left: 0;
   fill: #D0370D;
+}
+
+.mountainRangeFarFiller {
+  height: calc(var(--vh) * 10);
+  width: 100%;
+  position: absolute;
+  top: 89vh;
+  top: 89%;
+  left: 0;
+  fill: #D0370D;
+  z-index: 0;
 }
 
 .star {
@@ -573,6 +585,7 @@ main {
   border: 1px solid #E7B85A;
   border-radius: 10px 10px 0 0;
   background-color: #0b2d39;
+  max-width: 35px;
 } 
 
 .scrollBttns:nth-of-type(1) {
@@ -749,7 +762,7 @@ main {
 
 .aboutMeOutline {
   border-radius: 15px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   height: 100%;
 }
 
@@ -757,11 +770,23 @@ main {
   display: none;
 }
 
+.aboutMeGrid {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-areas: "scrollUp content";
+}
+
+.aboutMeListOutline {
+  overflow-y: hidden;
+}
+
 .aboutMeList {
-  margin-bottom: 18vh;
+  /* margin-bottom: 18vh; */
   border-radius: 15px;
   padding: 3vw;
+  grid-area: content;
   background-color: rgba(11, 45, 57, 0.7);
+  transition: margin-top 0.5s;
 }
 
 .poolImg {
@@ -769,8 +794,8 @@ main {
   background-image: url('/images/vogt_pool-2-min.jpg');
   background-position: center;
   background-size: cover;
-  height: 86vw;
-  width: 86vw;
+  height: 77vw;
+  width: 77vw;
 }
 
 @media (min-width:700px) {
